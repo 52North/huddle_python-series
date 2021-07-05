@@ -190,6 +190,11 @@ Conda is used most often via one of the following two software distributions: An
   ```sh
   conda deactivate
   ```
+* **Clean** a conda environment
+
+  ```sh
+  conda clean --all
+  ```
 
 ### Virtual Environments
 
