@@ -10,7 +10,6 @@
 * [Notes](#notes)
 * [Links](#links)
 
-
 ## Meta
 
 * **Authors**:
@@ -19,14 +18,12 @@
 
 * **License**: [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
-
 ## Content
 
 Two main concepts/tools exists in the python world to cope with dependency management:
 
 * pip - _**p**ackage **i**nstaller for **p**ython_
 * virtual environments - "isolated" collection of dependencies (and other requirements)
-
 
 ### PIP
 
@@ -143,10 +140,56 @@ Pip knows two types of dependencies: normal and optional (aka [extras](https://w
 
   1. Use pip to install the latest or required package versions. E.g. debian `python-` packages might not fulfill your version requirements.
 
+* **pip vs conda**
+
+  >pip installs *python* packages within *any* environment; conda installs *any* package within *conda* environments. If all you are doing is installing *Python packages* within an *isolated environment,* conda and pip+virtualenv are mostly interchangeable, [...]
+
+  [https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
 
 
 ### Conda
 
+Package manager which installs packages (not only Python packages!) into conda environments.
+Conda is used most often via one of the following two software distributions: Anaconda, Miniconda.
+
+**Note**: conda environments are not necessarily isolated from the host system as they may use site-packages from there. To make sure not to use host site-packages you can set the following environment variable: `export PYTHONNOUSERSITE=True` (this behaviour was experienced with Ubuntu+Miniconda).
+
+
+* **Create** a new conda environment
+
+  ```sh
+  conda create --name conda_env_name
+  ```
+
+* **Remove** an existing conda environment
+
+  ```sh
+  conda remove --name conda_env_name --all
+  ```
+
+* **List** all known conda environments
+
+  ```sh
+  conda info -e
+  ```
+
+* **Activate** a conda environemnt
+
+  ```sh
+  source activate conda_env_name
+  ```
+
+  An activated conda environment is indicated in the terminal like this
+
+  ```sh
+  (conda_env_name)$
+  ```
+
+* **Deactivate** a conda environment
+
+  ```sh
+  conda deactivate
+  ```
 
 ### Virtual Environments
 
@@ -155,13 +198,19 @@ Pip knows two types of dependencies: normal and optional (aka [extras](https://w
 
 Leightweight virtual environment with its own Python binary and (isolated) site directories.
 
-* **Create** a new environement
+* **Create** a new environment
 
   ```sh
   python3 -m venv path/to/venv
   ```
 
-* **Activate** an environemnt
+* **Remove** an existing environment
+
+  ```sh
+  rm -r path/to/venv
+  ```
+
+* **Activate** an environment
 
   ```sh
   source path/to/venv/bin/activate
@@ -175,12 +224,11 @@ Leightweight virtual environment with its own Python binary and (isolated) site 
 
   Packages can then be installed, e.g., via [pip](#pip).
 
-* **Deactivate** an environemnt
+* **Deactivate** an environment
 
   ```sh
   deactivate
   ```
-
 
 ## Notes
 
@@ -199,7 +247,6 @@ Leightweight virtual environment with its own Python binary and (isolated) site 
     * anaconda
     * conda-forge
 * Conflict Management
-
 
 ## Links
 
