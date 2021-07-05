@@ -1,11 +1,24 @@
 # 52°North - Huddle - Python Series - Virtual Environments and Dependency Management
 
+## Table of Contents
+* [Meta](#meta)
+* [Content](#content)
+  * [PIP](#pip)
+  * [Virtual Environments](#virtual-environments)
+    * [venv](#venv)
+  * [conda](#conda)
+* [Notes](#notes)
+* [Links](#links)
+
+
 ## Meta
 
 * **Authors**:
   * [EHJ-52n](https://github.com/ehj-52n)
+  * [MartinPontius](https://github.com/MartinPontius)
 
 * **License**: [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+
 
 ## Content
 
@@ -13,6 +26,7 @@ Two main concepts/tools exists in the python world to cope with dependency manag
 
 * pip - _**p**ackage **i**nstaller for **p**ython_
 * virtual environments - "isolated" collection of dependencies (and other requirements)
+
 
 ### PIP
 
@@ -129,7 +143,44 @@ Pip knows two types of dependencies: normal and optional (aka [extras](https://w
 
   1. Use pip to install the latest or required package versions. E.g. debian `python-` packages might not fulfill your version requirements.
 
-## Virtual Environments
+
+
+### Conda
+
+
+### Virtual Environments
+
+
+#### venv
+
+Leightweight virtual environment with its own Python binary and (isolated) site directories.
+
+* **Create** a new environement
+
+  ```sh
+  python3 -m venv path/to/venv
+  ```
+
+* **Activate** an environemnt
+
+  ```sh
+  source path/to/venv/bin/activate
+  ```
+
+  An activated environment is indicated in the terminal like this
+
+  ```sh
+  (venv_name)$
+  ```
+
+  Packages can then be installed, e.g., via [pip](#pip).
+
+* **Deactivate** an environemnt
+
+  ```sh
+  deactivate
+  ```
+
 
 ## Notes
 
@@ -149,13 +200,16 @@ Pip knows two types of dependencies: normal and optional (aka [extras](https://w
     * conda-forge
 * Conflict Management
 
+
 ## Links
 
 * [pip User Guide](https://pip.pypa.io/en/stable/user_guide/)
 * [PyPI](https://pypi.org/)
+* [PEP 405::Python Virtual Environments](https://www.python.org/dev/peps/pep-0405/)
 * [PEP 508::Extras](https://www.python.org/dev/peps/pep-0508/#extras)
 * [PyDoc::Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
 * [Python Packaging User Guide » Tutorials » Installing Packages](https://packaging.python.org/tutorials/installing-packages/)
 * [Python Packaging User Guide » Tutorials » Managing Application Dependencies](https://packaging.python.org/tutorials/managing-dependencies/)
 * [pip-license](https://pypi.org/project/pip-licenses/)
 * [pipdeptree](https://pypi.org/project/pipdeptree/)
+* [Conda: Myths and Misconceptions](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
