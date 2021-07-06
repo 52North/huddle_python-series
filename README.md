@@ -195,7 +195,12 @@ Conda is used most often via one of the following two software distributions: An
   ```sh
   conda clean --all
   ```
-
+ * Deactivate channel priority  
+ May speed resolving dependencies when installing packages  
+  ```sh
+  conda config --set channel_priority false
+  ```
+ 
 ### Virtual Environments
 
 
