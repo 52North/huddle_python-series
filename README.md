@@ -1,20 +1,10 @@
-# 52°North - Huddle - Python Series - Virtual Environments and Dependency Management
-
-## Table of Contents
-* [Meta](#meta)
-* [Content](#content)
-  * [PIP](#pip)
-  * [Virtual Environments](#virtual-environments)
-    * [venv](#venv)
-  * [conda](#conda)
-* [Notes](#notes)
-* [Links](#links)
-
+# 52°North - Huddle - Python Series
 ## Meta
 
 * **Authors**:
   * [EHJ-52n](https://github.com/ehj-52n)
   * [MartinPontius](https://github.com/MartinPontius)
+  * [SebaDro](https://github.com/SebaDro)
 
 * **License**: [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
