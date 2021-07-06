@@ -146,14 +146,12 @@ Pip knows two types of dependencies: normal and optional (aka [extras](https://w
 
   [https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
 
-
 ### Conda
 
 Package manager which installs packages (not only Python packages!) into conda environments.
-Conda is used most often via one of the following two software distributions: Anaconda, Miniconda.
+[Conda](https://packaging.python.org/key_projects/#conda) is used most often via one of the following two software distributions: Anaconda, Miniconda.
 
-**Note**: conda environments are not necessarily isolated from the host system as they may use site-packages from there. To make sure not to use host site-packages you can set the following environment variable: `export PYTHONNOUSERSITE=True` (this behaviour was experienced with Ubuntu+Miniconda).
-
+**Note**: conda environments are not necessarily isolated from the host system as they may use site-packages from there. To make sure not to use host site-packages you can set the following environment variable: `export PYTHONNOUSERSITE=True` (this behavior was experienced with Ubuntu+Miniconda).
 
 * **Create** a new conda environment
 
@@ -190,6 +188,7 @@ Conda is used most often via one of the following two software distributions: An
   ```sh
   conda deactivate
   ```
+
 * **Clean** a conda environment
 
   ```sh
@@ -203,10 +202,9 @@ Conda is used most often via one of the following two software distributions: An
  
 ### Virtual Environments
 
-
 #### venv
 
-Leightweight virtual environment with its own Python binary and (isolated) site directories.
+Lightweight virtual environment with its own Python binary and (isolated) site directories.
 
 * **Create** a new environment
 
@@ -262,6 +260,7 @@ Leightweight virtual environment with its own Python binary and (isolated) site 
 
 * [pip User Guide](https://pip.pypa.io/en/stable/user_guide/)
 * [PyPI](https://pypi.org/)
+* [pipenv](https://packaging.python.org/key_projects/#pipenv)
 * [PEP 405::Python Virtual Environments](https://www.python.org/dev/peps/pep-0405/)
 * [PEP 508::Extras](https://www.python.org/dev/peps/pep-0508/#extras)
 * [PyDoc::Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
