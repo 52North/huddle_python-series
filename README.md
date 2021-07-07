@@ -169,6 +169,7 @@ When using python on docker images, pip comes in handy, but some recommendations
 
 Package manager which installs packages (not only Python packages!) into conda environments.
 [Conda](https://packaging.python.org/key_projects/#conda) is used most often via one of the following two software distributions: Anaconda, Miniconda.
+Note that Anaconda is a distribution for scientific computing that installs many additional packages beyond just conda. If only conda is needed, miniconda is the preferred option.
 
 **Note**: conda environments are not necessarily isolated from the host system as they may use site-packages from there. To make sure not to use host site-packages you can set the following environment variable: `export PYTHONNOUSERSITE=True` (this behavior was experienced with Ubuntu+Miniconda).
 
@@ -177,6 +178,27 @@ Package manager which installs packages (not only Python packages!) into conda e
   ```sh
   conda create --name conda_env_name
   ```
+
+* **Create** a new conda environment from **environment.yml** file
+
+  ```sh
+  conda env create -f environment.yml
+  ```
+
+  Example file:
+
+  ```sh
+  name: environment_name
+  channels:
+    - conda-forge
+    - defaults
+  dependencies:
+    - python=3.6
+    - numpy=1.9.*
+    - flask
+  ```
+
+  Note: it is possible to install packages from specific channels by prepending the channel name, e.g. `conda-forge::numpy`
 
 * **Remove** an existing conda environment
 
@@ -193,7 +215,7 @@ Package manager which installs packages (not only Python packages!) into conda e
 * **Activate** a conda environemnt
 
   ```sh
-  source activate conda_env_name
+  conda activate conda_env_name
   ```
 
   An activated conda environment is indicated in the terminal like this
@@ -208,11 +230,29 @@ Package manager which installs packages (not only Python packages!) into conda e
   conda deactivate
   ```
 
-* **Clean** a conda environment
+* **Clean**, remove unused packages (packages which are not used in *any* environment) and caches
 
   ```sh
   conda clean --all
   ```
+
+* **Install** a package
+
+  ```sh
+  conda install package_name
+  ```
+
+  Useful parameters
+  * `--name` or `-n`: sets the conda environment where the package(s) should be installed, default is the currently activated environment
+  * `--channel` or `-c`: defines additional channels to search for packages, ff no additional channel is provided the defaults or channels from `.condarc` are used.
+  * `--freeze-installed, --no-update-deps`: do not update already-installed dependencies
+
+* **Update** a package
+
+  ```sh
+  conda update package_name
+  ```
+
 
 ### Virtual Environments
 
