@@ -166,6 +166,7 @@ When using python on docker images, pip comes in handy, but some recommendations
   [https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/)
 
 ### Conda
+#### Important commands
 
 Package manager which installs packages (not only Python packages!) into conda environments.
 [Conda](https://packaging.python.org/key_projects/#conda) is used most often via one of the following two software distributions: Anaconda, Miniconda.
@@ -252,6 +253,17 @@ Note that Anaconda is a distribution for scientific computing that installs many
   ```sh
   conda update package_name
   ```
+  #### Best practices
+  ##### Channels
+  Packages can be retrieved from different channels. Most famous channels are:
+  * [Anaconda](https://anaconda.org/anaconda)
+  * [R](https://anaconda.org/r)
+  * [Bioconda](https://bioconda.github.io/)
+  * [conda-forge](https://conda-forge.org/)
+  
+  Mixing packages from different channels, may lead to package conflicts. To avoid common problems you should consider some aspects listed below:
+  * conda-forge should be first choice, since it is community driven and has a higher chance to find up-to-date packages. In addition, for the default Anaconda channel, "heavy commercial usage" requires charging (https://www.anaconda.com/blog/sustaining-our-stewardship-of-the-open-source-data-science-community). However, in some cases, the latest version of some famous data science frameworks are only provided by dedicated channels (e.g. currently, Tensorflow v2.5.0 is only available in the Anaconda repository, latest PyTorch version is provided by a dedicated [pytorch channel](https://anaconda.org/pytorch))
+  * You can add your favorite channels to your default channel list with `conda config --add channels <channel-name>` and set a strict channel priority with `conda config --set channel_priority strict`. It is recommended to add conda-forge to your default channels, so that any package that is installed with `conda install <package-name>` will be retrieved from this channel. If you still need any package from another channel, you can specifiy it with `conda install -c <channel-name> <package-name>`.
 
 
 ### Virtual Environments
