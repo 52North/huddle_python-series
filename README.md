@@ -84,6 +84,16 @@ docker run --rm --interactive --tty \
           pip-licenses -f markdown"
 ```
 
+#### Direct Dependencies
+
+The tool `pipreqs` can be used to list only the directly used and imported dependencies. Just install it via pip from pypi. Then execute the following command with all your python code in the folder `my-pkg`:
+
+```sh
+pipreqs --print --no-pin my-pkg | sort -h > requirements.txt
+```
+
+By using `--no-pin` the version is not fixed and always the latest one will be used. Might be useful during development.
+
 #### Update dependencies
 
 ```sh
