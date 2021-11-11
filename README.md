@@ -8,5 +8,5 @@ Best practices and more or less about Python
 
 ## Content
 
-1. [Dependency Management](/depdendency_management/README.md)
+1. [Dependency Management](/dependency_management/README.md)
 2. [Geospatial Libraries](/geospatial_libraries/README.md)

@@ -1,4 +1,4 @@
-# 52°North - Huddle - Python Series: Depdendency Management
+# 52°North - Huddle - Python Series: Dependency Management
 ## Meta
 
 * **Authors**:
