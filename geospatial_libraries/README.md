@@ -3,6 +3,7 @@
 
 * **Authors**:
   * [SebaDro](https://github.com/SebaDro)
+  * [MartinPontius](https://github.com/MartinPontius)
 
 * **License**: [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
@@ -62,6 +63,44 @@ Python API that enables the use of GRASS GIS modules within custom scripts.
 ### PyGRASS
 https://grass.osgeo.org/grass78/manuals/libpython/script_intro.html  
 Object-oriented API for an easier use of GRASS GIS modules in Python.
+
+### OWSLib
+https://github.com/geopython/OWSLib  
+Library for client programming with OWS interface standards and their related content models.
+
+### sos4py (52N)
+https://github.com/52North/sos4py  
+Extends OWSLib`s SOS capabilities by providing a convenience layer to access SOS instances without much technical knowledge of the standards.
+Inspired by [sos4R](https://github.com/52North/sos4R).
+
+### OSMnx
+https://github.com/gboeing/osmnx  
+Library for working with street networks. It allows to download geospatial data from OpenStreetMap and to model, project, visualize, and analyze real-world street networks and any other geospatial geometries.
+
+### envirocar-py (52N)
+https://github.com/enviroCar/envirocar-py  
+Library for querying and downloading trajectory data from the enviroCar API.
+
+### Folium
+https://github.com/python-visualization/folium  
+Library for creating interactive leaflet maps. It is especially useful in Jupyter Notebooks.
+
+### Cartopy
+https://github.com/SciTools/cartopy  
+Library for drawing maps.
+
+### xarray
+https://github.com/pydata/xarray  
+Library that provides multi-dimensional data structures ("data cubes") with support for coordinates (e.g. time, latitude, longitude).
+Its data model is based on [netCDF](https://www.unidata.ucar.edu/software/netcdf/). The library also allows visualizing data.
+
+### MetPy
+https://github.com/Unidata/MetPy  
+Library for reading, analyzing and visualizing weather data.
+
+### geopy
+https://github.com/geopy/geopy  
+Library for geocoding and distance measuring.
 
 ## Use cases
 ### Geoprocessing
