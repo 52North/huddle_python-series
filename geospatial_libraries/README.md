@@ -26,7 +26,7 @@ analysis of geometric objects. It neither provides data readers and writers nor 
 functionalities. Depends on [GEOS](https://trac.osgeo.org/geos/).
 
 ### pyproj
-https://pyproj4.github.io/pyproj/stable/
+https://pyproj4.github.io/pyproj/stable/  
 Python interface for the [PROJ library](https://proj.org/index.html) to transform geospatial
 coordinates between different reference coordinate systems.
 
