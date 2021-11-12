@@ -94,6 +94,10 @@ https://github.com/pydata/xarray
 Library that provides multi-dimensional data structures ("data cubes") with support for coordinates (e.g. time, latitude, longitude).
 Its data model is based on [netCDF](https://www.unidata.ucar.edu/software/netcdf/). The library also allows visualizing data.
 
+### rioxarray
+https://github.com/corteva/rioxarray  
+Geospatial extension of xarray for supporting rasterio operations on multi-dimensional data structures.  
+
 ### MetPy
 https://github.com/Unidata/MetPy  
 Library for reading, analyzing and visualizing weather data.
