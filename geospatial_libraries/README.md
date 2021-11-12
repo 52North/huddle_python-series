@@ -106,6 +106,15 @@ Library for reading, analyzing and visualizing weather data.
 https://github.com/geopy/geopy  
 Library for geocoding and distance measuring.
 
+### landsatxplore
+https://github.com/yannforget/landsatxplore  
+Library to search and download Landsat scenes from EarthExplorer (free of charge but account necessary). 
+
+### snappy
+https://senbox.atlassian.net/wiki/spaces/SNAP/pages/19300362/How+to+use+the+SNAP+API+from+Python  
+SNAP API from Python. SNAP (SeNtinel’s Application Platform) is a platform to process and analyze Earth Observation data (Sentinel).
+Its native API is implemented in Java.
+
 ## Use cases
 ### Geoprocessing
 The combination of the former three libraries (Fiona, Shapely, pyproj) is suitable for tackling basic
